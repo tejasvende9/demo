@@ -1,0 +1,33 @@
+<div >
+    {{msg}}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Date of birth</th>
+                <th>Gender</th>
+                <th>Hobby</th>
+                <th>Query</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Delete </th>
+                
+            </tr>
+
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of infodata ,index as i ">
+                <td>{{s.nm}}</td>   
+                <td>{{s.dob}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.hobby}}</td>
+                <td>{{s.que}}</td>
+                <td>{{s.em}}</td>
+                <td>{{s.pwd}}</td>
+                <td><button class="btn btn-danger" (click)="deletedata(s.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
